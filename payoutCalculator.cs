@@ -14,6 +14,7 @@ namespace Roulette_Payout_Calculator
     {
         //defining our initial variables, we want to store betTypes in an array to group them, eg. six-lines, splits
         //initialise the payout variable as 0 and the helpOpen boolean as false
+        int attempts = 0; //new branch on git, adding iterative count for how many tries the user has had at the current payout
         int payout = 0;
         int[] betTypeTotals = new int[5];
         payoutInfo helpScreen = new payoutInfo();
@@ -42,6 +43,7 @@ namespace Roulette_Payout_Calculator
             bool[] chipsOn = new bool[12];
             int[] chipBetTotal = new int[12];
             int payoutTotal = 0;
+            attempts = 0; //zero out the attempts count each new spin
 
             //disable the button each time there's a new spin because we want at least one guess to be made first
             btnGiveup.Enabled = false;
@@ -96,10 +98,11 @@ namespace Roulette_Payout_Calculator
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            attempts++; //increase the amount of attempts the user has had as soon as they press submit
             //compare the value in the textbox to the value we have stored in 'payout'
             //we always clear the textbox after any guess
             if(tbAnswer.Text == payout.ToString()){
-                MessageBox.Show($"Correct! The total payout was {payout}.");
+                MessageBox.Show($"Correct! The total payout was {payout}. You attempted this payout {attempts} time(s).");
                 payout = newSpin();
             } else {
                 wrongAnswer();
