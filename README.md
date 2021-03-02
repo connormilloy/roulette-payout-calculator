@@ -2,5 +2,5 @@
 <h4>This is a single-serve application which helps train new roulette dealers. It will generate a random bet on the screen which the dealer may encounter on an actual game and they will have to input the correct payout after calculating it themselves.</h4>
 
 <h3>Screenshots</h3>
-Main Application Screen - https://i.imgur.com/UVR5L8H.png
+Main Application Screen - https://i.imgur.com/UVR5L8H.png <br>
 Help Window - https://i.imgur.com/mbqGOX2.png
