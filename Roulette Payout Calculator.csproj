@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="payoutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payoutInfo.Designer.cs">
+      <DependentUpon>payoutInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="payoutCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <EmbeddedResource Include="payoutCalculator.resx">
       <DependentUpon>payoutCalculator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="payoutInfo.resx">
+      <DependentUpon>payoutInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,9 +90,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Chip Large.png" />
-    <Content Include="Chip Small.png" />
-    <Content Include="Layout.png" />
+    <None Include="Resources\Chip Large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infographic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
